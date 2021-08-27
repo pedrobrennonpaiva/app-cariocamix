@@ -1,0 +1,14 @@
+{
+  "name": "cariocamix",
+  "displayName": "Carioca Mix",
+  "android": {
+      "package": "com.cariocamix",
+      "versionCode": 1,
+      "googleServicesFile": "./google-services.json"
+  },
+  "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.cariocamix",
+      "buildNumber": "1.0.0"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "355879719735",
+    "project_id": "cariocamix-d90cc",
+    "storage_bucket": "cariocamix-d90cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:355879719735:android:5038f878ceb19f4cb6c0b2",
+        "android_client_info": {
+          "package_name": "com.cariocamix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "355879719735-k2t1r09tagaiiramd4qogv74tv65f1r0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cariocamix",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "355879719735-ilv0vi5cq3kak6jfp11b7mjvkiii1l55.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB43LX5dyrc5C5RV0S2E71DM_QducQA7T8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "355879719735-ilv0vi5cq3kak6jfp11b7mjvkiii1l55.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
