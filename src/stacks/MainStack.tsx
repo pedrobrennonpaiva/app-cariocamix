@@ -26,6 +26,9 @@ const MainStack = () => {
                         fontFamily: theme.fonts.text500,
                         fontSize: 18,
                         marginTop: 5,
+                    },
+                    headerStyle: {
+                        backgroundColor: theme.colors.background,
                     }
                 }}
             />
@@ -38,6 +41,9 @@ const MainStack = () => {
                         fontFamily: theme.fonts.text500,
                         fontSize: 18,
                         marginTop: 5,
+                    },
+                    headerStyle: {
+                        backgroundColor: theme.colors.background,
                     }
                 }}
             />
@@ -50,6 +56,9 @@ const MainStack = () => {
                         fontFamily: theme.fonts.text500,
                         fontSize: 18,
                         marginTop: 5,
+                    },
+                    headerStyle: {
+                        backgroundColor: theme.colors.background,
                     }
                 }}
             />
@@ -62,6 +71,9 @@ const MainStack = () => {
                         fontFamily: theme.fonts.text500,
                         fontSize: 18,
                         marginTop: 5,
+                    },
+                    headerStyle: {
+                        backgroundColor: theme.colors.background,
                     }
                 }}
             />

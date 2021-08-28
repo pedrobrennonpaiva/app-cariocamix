@@ -1,15 +1,16 @@
 import { Base } from "./base/Base";
 import { User } from "./User";
 import { Coupon } from "./Coupon";
-import { v4 } from "uuid";
 
 export class UserCoupon extends Base {
 
-    userId: string = v4();
+    userId: string = '';
 
     user: User | null = null;
-    
-    couponId: string = v4();
-    
+
+    couponId: string = '';
+
     coupon: Coupon | null = null;
+
+    isUsed: boolean = false;
 }

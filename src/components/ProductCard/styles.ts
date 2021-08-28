@@ -75,6 +75,8 @@ export const styles = StyleSheet.create({
     containerModal: {
         flex: 1,
         backgroundColor: theme.colors.background,
+        borderTopColor: theme.colors.overlay,
+        borderTopWidth: 2,
     },
     listViewModal: {
         paddingHorizontal: 20,

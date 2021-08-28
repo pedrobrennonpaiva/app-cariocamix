@@ -23,6 +23,7 @@ const PAYMENT_TYPE_URL = 'paymentType';
 const PRODUCT_URL = 'product';
 const PRODUCT_ITEM_URL = 'productItem';
 const STORE_URL = 'store';
+const STORE_DAYHOUR_URL = 'storeDayHour';
 const USER_COUPON_URL = 'userCoupon';
 
 class Api {
@@ -282,7 +283,8 @@ export {
     PRODUCT_URL,
     PRODUCT_ITEM_URL,
     STORE_URL,
-    USER_COUPON_URL
+    USER_COUPON_URL,
+    STORE_DAYHOUR_URL,
 };
 
 export default Api;

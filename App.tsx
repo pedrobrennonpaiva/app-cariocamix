@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
 import { StatusBar, useColorScheme } from 'react-native';
+import 'react-native-get-random-values';
 import { theme } from './src/global/styles/theme';
 import { AuthProvider } from './src/hooks/auth';
 import { Routes } from './src/routes';

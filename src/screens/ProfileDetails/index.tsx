@@ -4,7 +4,7 @@ import { RectButton } from "react-native-gesture-handler";
 import { TextInputMask } from "react-native-masked-text";
 
 import SmilePng from '../../assets/emoji-sorriso.png';
-import ModalAlertCustom from "../../components/ModalAlertCustom";
+import ModalAlertTextCustom from "../../components/ModalAlertTextCustom";
 import TextInputCustom from "../../components/TextInputCustom";
 import TextInputPassword from "../../components/TextInputPassword";
 import { Utils } from "../../configs/Utils";
@@ -17,7 +17,7 @@ import { styles } from "./styles";
 
 const ProfileDetails = () => {
 
-    const [error, setError] = useState('!');
+    const [error, setError] = useState('');
     const [openModalAlert, setOpenModalAlert] = useState(false);
 
     const { user, updateUser, loading } = useAuth();
@@ -231,11 +231,11 @@ const ProfileDetails = () => {
                 <Text style={styles.txtBtn}>Atualizar senha</Text>
             </RectButton>
 
-            <ModalAlertCustom visible={openModalAlert} closeModal={() => setOpenModalAlert(false)}>
-                <Text>
-                    {error}
-                </Text>
-            </ModalAlertCustom>
+            <ModalAlertTextCustom
+                visible={openModalAlert}
+                closeModal={() => setOpenModalAlert(false)}
+                text={error}
+            />
         </ScrollView>
     )
 }

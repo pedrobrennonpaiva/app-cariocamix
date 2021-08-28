@@ -9,7 +9,7 @@ import { useAuth } from '../../hooks/auth';
 import { theme } from '../../global/styles/theme';
 import { Validations } from '../../configs/Validations';
 import TextInputCustom from '../../components/TextInputCustom';
-import ModalAlertCustom from '../../components/ModalAlertCustom';
+import ModalAlertTextCustom from '../../components/ModalAlertTextCustom';
 import Api from '../../services/api';
 
 const ForgotPassword = () => {
@@ -84,11 +84,11 @@ const ForgotPassword = () => {
                 </View>
             </ImageBackground>
 
-            <ModalAlertCustom visible={openModalAlert} closeModal={() => setOpenModalAlert(false)}>
-                <Text>
-                    {error}
-                </Text>
-            </ModalAlertCustom>
+            <ModalAlertTextCustom
+                visible={openModalAlert}
+                closeModal={() => setOpenModalAlert(false)}
+                text={error}
+            />
         </ScrollView>
     )
 }

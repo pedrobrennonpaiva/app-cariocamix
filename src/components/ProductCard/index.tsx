@@ -11,7 +11,7 @@ import { Product } from "../../models/Product";
 import { styles } from "./styles";
 import { CartModel, CartProductModel } from "../../models/CartModel";
 import { ProductItem } from "../../models/ProductItem";
-import ModalAlertCustom from "../ModalAlertCustom";
+import ModalAlertTextCustom from "../ModalAlertTextCustom";
 
 type Props = {
     data: Product;
@@ -86,6 +86,7 @@ export const ProductCard = ({ data }: Props) => {
             cartProduct.total = totalPrice;
             await insertCartProduct(cartProduct);
 
+            setOpenModal(false);
             setError('Produto adicionado ao carrinho!');
             setOpenModalAlert(true);
         }
@@ -372,11 +373,11 @@ export const ProductCard = ({ data }: Props) => {
                 </View>
             </Modal>
 
-            <ModalAlertCustom visible={openModalAlert} closeModal={() => setOpenModalAlert(false)}>
-                <Text>
-                    {error}
-                </Text>
-            </ModalAlertCustom>
+            <ModalAlertTextCustom
+                visible={openModalAlert}
+                closeModal={() => setOpenModalAlert(false)}
+                text={error}
+            />
         </>
     )
 }

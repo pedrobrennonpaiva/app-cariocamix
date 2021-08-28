@@ -1,4 +1,5 @@
 import { Address } from "./Address";
+import { Coupon } from "./Coupon";
 import { PaymentType } from "./PaymentType";
 import { Product } from "./Product";
 import { ProductItem } from "./ProductItem";
@@ -10,6 +11,8 @@ export class CartModel {
     paymentType: PaymentType | null = null;
 
     address: Address | null = null;
+
+    coupon: Coupon | null = null;
 
     total: number = 0;
 }

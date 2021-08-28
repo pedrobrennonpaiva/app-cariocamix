@@ -11,6 +11,11 @@ export const styles = StyleSheet.create({
         color: theme.colors.heading,
         fontSize: 14,
         fontFamily: theme.fonts.text400,
-        textAlign: 'center',
     },
+    txtNone: {
+        color: theme.colors.heading,
+        fontSize: 14,
+        fontFamily: theme.fonts.text400,
+        textAlign: 'center',
+    }
 });

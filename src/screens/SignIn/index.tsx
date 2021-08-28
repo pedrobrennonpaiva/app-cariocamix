@@ -11,7 +11,7 @@ import { AuthenticateModel } from '../../models/Authenticate';
 import { Validations } from '../../configs/Validations';
 import TextInputPassword from '../../components/TextInputPassword';
 import TextInputCustom from '../../components/TextInputCustom';
-import ModalAlertCustom from '../../components/ModalAlertCustom';
+import ModalAlertTextCustom from '../../components/ModalAlertTextCustom';
 
 const SignIn = () => {
 
@@ -110,11 +110,11 @@ const SignIn = () => {
                 </View>
             </ImageBackground>
 
-            <ModalAlertCustom visible={openModalAlert} closeModal={() => setOpenModalAlert(false)}>
-                <Text>
-                    {error}
-                </Text>
-            </ModalAlertCustom>
+            <ModalAlertTextCustom
+                visible={openModalAlert}
+                closeModal={() => setOpenModalAlert(false)}
+                text={error}
+            />
         </ScrollView>
     )
 }

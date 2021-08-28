@@ -24,6 +24,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: theme.colors.background,
+        borderTopColor: theme.colors.overlay,
+        borderTopWidth: 2,
     },
     listView: {
         paddingHorizontal: 20,
@@ -65,11 +67,15 @@ const styles = StyleSheet.create({
     cartLine: {
         flexDirection: 'row',
         paddingVertical: 10,
+        borderBottomColor: theme.colors.overlay,
+        borderBottomWidth: 2,
     },
     cartSectionLine: {
         flex: 1,
     },
     cartButtonLine: {
+        padding: 20,
+        justifyContent: 'center',
     },
     titleCartLine: {
         color: theme.colors.heading,
@@ -81,6 +87,38 @@ const styles = StyleSheet.create({
         fontSize: 14,
         fontFamily: theme.fonts.text400,
     },
+    txtTotalCartLine: {
+        color: theme.colors.on,
+        fontSize: 14,
+        fontFamily: theme.fonts.text400,
+    },
+    viewCartSelects: {
+        marginTop: 60,
+    },
+    textCartSelect: {
+        color: theme.colors.heading,
+        fontSize: 15,
+        fontFamily: theme.fonts.text400,
+    },
+    couponTextTitle: {
+        fontFamily: theme.fonts.text500,
+        fontSize: 16,
+    },
+    couponTextSubTitle: {
+        fontFamily: theme.fonts.text400,
+        fontSize: 14,
+        color: theme.colors.on
+    },
+    viewStoreOpen: {
+        alignItems: 'center',
+        borderColor: theme.colors.overlay,
+        borderTopWidth: 1,
+        paddingVertical: 10
+    },
+    txtStoreOpen: {
+        fontFamily: theme.fonts.text400,
+        fontSize: 14,
+    }
 });
 
 export default styles;

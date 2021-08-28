@@ -10,6 +10,9 @@ import { User, UserAuthenticate } from '../models/User';
 import { AuthenticateModel } from '../models/Authenticate';
 import { Session } from '../services/session';
 import { CartModel, CartProductModel } from '../models/CartModel';
+import { Coupon } from '../models/Coupon';
+import { PaymentType } from '../models/PaymentType';
+import { Address } from '../models/Address';
 
 type AuthContextData = {
     user: User;
@@ -20,6 +23,10 @@ type AuthContextData = {
     cart: CartModel;
     insertCartProduct: (cartProduct: CartProductModel) => Promise<void>;
     removeCartProduct: (cartProduct: CartProductModel) => Promise<void>;
+    finishCart: () => Promise<void>;
+    setCouponCart: (coupon: Coupon) => Promise<void>;
+    setPaymentTypeCart: (paymentType: PaymentType) => Promise<void>;
+    setAddressCart: (address: Address) => Promise<void>;
 }
 
 type AuthProviderProps = {
@@ -118,6 +125,33 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
         Session.setCart(nCart);
     }
 
+    async function setCouponCart(coupon: Coupon) {
+
+        var nCart = cart;
+        nCart.coupon = coupon;
+
+        setCart(nCart);
+        Session.setCart(nCart);
+    }
+
+    async function setPaymentTypeCart(paymentType: PaymentType) {
+
+        var nCart = cart;
+        nCart.paymentType = paymentType;
+
+        setCart(nCart);
+        Session.setCart(nCart);
+    }
+
+    async function setAddressCart(address: Address) {
+
+        var nCart = cart;
+        nCart.address = address;
+
+        setCart(nCart);
+        Session.setCart(nCart);
+    }
+
     async function loadCart() {
         const storage = await Session.getCart();
 
@@ -125,6 +159,11 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
         {
             setCart(storage);
         }
+    }
+
+    async function finishCart() {
+        setCart({} as CartModel);
+        Session.setCart({} as CartModel);
     }
 
     async function loadUserStorageData() {
@@ -150,7 +189,11 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
             updateUser,
             cart,
             insertCartProduct,
-            removeCartProduct
+            removeCartProduct,
+            finishCart,
+            setCouponCart,
+            setPaymentTypeCart,
+            setAddressCart
         }}>
             {children}
         </AuthContext.Provider>

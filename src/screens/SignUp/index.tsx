@@ -15,7 +15,7 @@ import { theme } from "../../global/styles/theme";
 import { Utils } from "../../configs/Utils";
 import TextInputPassword from "../../components/TextInputPassword";
 import TextInputCustom from "../../components/TextInputCustom";
-import ModalAlertCustom from "../../components/ModalAlertCustom";
+import ModalAlertTextCustom from "../../components/ModalAlertTextCustom";
 
 const SignUp = () => {
 
@@ -183,11 +183,11 @@ const SignUp = () => {
                 </View>
             </ImageBackground>
 
-            <ModalAlertCustom visible={openModalAlert} closeModal={() => setOpenModalAlert(false)}>
-                <Text>
-                    {error}
-                </Text>
-            </ModalAlertCustom>
+            <ModalAlertTextCustom
+                visible={openModalAlert}
+                closeModal={() => setOpenModalAlert(false)}
+                text={error}
+            />
         </ScrollView>
     )
 }

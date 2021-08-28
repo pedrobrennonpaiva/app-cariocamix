@@ -13,4 +13,13 @@ export const styles = StyleSheet.create({
         fontFamily: theme.fonts.text400,
         textAlign: 'center',
     },
+    couponTextTitle: {
+        fontFamily: theme.fonts.text500,
+        fontSize: 16,
+    },
+    couponTextSubTitle: {
+        fontFamily: theme.fonts.text400,
+        fontSize: 14,
+        color: theme.colors.on
+    }
 });
