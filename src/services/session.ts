@@ -42,11 +42,11 @@ export class Session {
         AsyncStorage.removeItem(Session.USER);
     }
 
-    static getUser = async () : Promise<User | null> => {
+    static getUser = async () : Promise<UserAuthenticate | null> => {
         var gItem = await AsyncStorage.getItem(Session.USER);
 
         try {
-            return gItem ? JSON.parse(gItem) as User : null;
+            return gItem ? JSON.parse(gItem) as UserAuthenticate : null;
         }
         catch (error) {
             console.log(error);

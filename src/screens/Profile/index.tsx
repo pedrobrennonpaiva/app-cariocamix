@@ -25,19 +25,19 @@ const Profile = () => {
             <ItemMenuProfile
                 title='Endereços'
                 subtitle='Meus endereços de entrega'
-                screenName=''
+                screenName='Addresses'
                 icon={faMapMarkerAlt}
             />
             <ItemMenuProfile
                 title='Formas de pagamento'
                 subtitle='Minhas formas de pagamento'
-                screenName=''
+                screenName='PaymentTypes'
                 icon={faCreditCard}
             />
             <ItemMenuProfile
                 title='Cupons'
                 subtitle='Meus cupons de desconto'
-                screenName=''
+                screenName='Coupons'
                 icon={faTicketAlt}
             />
 

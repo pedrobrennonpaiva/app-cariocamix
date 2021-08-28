@@ -68,13 +68,18 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
         try {
             setLoading(true);
 
-            await api.updateUser(newUser).then(res => {
+            await api.updateUser(newUser).then(async res => {
                 var nuser = res.data.user as UserAuthenticate;
+                var userAuth = await Session.getUser();
+                nuser.token = userAuth?.token!;
+                nuser.tokenExpires = userAuth?.tokenExpires!;
                 Session.login(nuser);
                 setUser(nuser);
                 setLoading(false);
             })
             .catch(err => {
+                console.log(err);
+                setLoading(false);
                 throw `${err.response.data.message ?
                     err.response.data.message :
                     'Não foi possível atualizar o usuário!'}`;
@@ -82,6 +87,8 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
         }
         catch (err)
         {
+            console.log(err);
+            setLoading(false);
             throw `Ocorreu um erro ao atualizar! ${err}`;
         }
     }

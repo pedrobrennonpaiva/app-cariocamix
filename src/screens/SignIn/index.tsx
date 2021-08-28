@@ -34,8 +34,13 @@ const SignIn = () => {
     const goBack = () => {
         navigation.goBack();
     }
+
     const goRegister = () => {
         navigation.navigate('SignUp');
+    }
+
+    const goForgotPassword = () => {
+        navigation.navigate('ForgotPassword');
     }
 
     const handleLogin = async () => {
@@ -96,6 +101,8 @@ const SignIn = () => {
                             <Text style={styles.txtLogin}>Fazer Login</Text>
                         </RectButton>
                     }
+
+                    <Text onPress={goForgotPassword} style={styles.txtRegister}>Esqueceu sua senha?</Text>
 
                     <Text onPress={goRegister} style={styles.txtRegister}>Não possui conta? Cadastre-se</Text>
 
